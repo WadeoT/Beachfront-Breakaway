@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beachfront Breakaway</title>
   <style>
+    :root {
+      --sand: #E8C58E;
+      --sky: #A0C8E8;
+      --slate: #8D99A3;
+      --text-dark: #333;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -12,15 +19,15 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #e0f7fa;
-      color: #004d40;
+      background-color: var(--sky);
+      color: var(--text-dark);
     }
 
     /* Sticky Navbar */
     nav {
       position: sticky;
       top: 0;
-      background-color: #004d40;
+      background-color: var(--slate);
       padding: 1rem;
       display: flex;
       justify-content: center;
@@ -29,7 +36,7 @@
     }
 
     nav a {
-      color: #b2dfdb;
+      color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
@@ -37,8 +44,8 @@
     }
 
     nav a:hover {
-      color: white;
-      transform: scale(1.1);
+      color: var(--sand);
+      transform: scale(1.05);
     }
 
     header {
@@ -83,23 +90,23 @@
     }
 
     section {
-      background-color: #b2dfdb;
+      background-color: var(--sand);
       padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,77,64,0.2);
+      box-shadow: 0 0 10px rgba(141,153,163,0.2);
       margin-bottom: 2rem;
     }
 
     section h2 {
       margin-top: 0;
       font-size: 2rem;
-      color: #004d40;
+      color: var(--slate);
     }
 
     section p, section ul {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #004d40;
+      color: var(--text-dark);
     }
 
     ul {
@@ -109,8 +116,8 @@
     footer {
       text-align: center;
       padding: 1rem 0;
-      background-color: #004d40;
-      color: #b2dfdb;
+      background-color: var(--slate);
+      color: white;
       margin-top: 3rem;
     }
   </style>
@@ -142,36 +149,4 @@
       <h2>About Us</h2>
       <p>
         Welcome to Beachfront Breakaway, your perfect short stay accommodation by the sea.
-        We offer a serene and eco-friendly escape where you can relax, recharge, and enjoy the
-        natural beauty of the coastline without sacrificing modern comforts.
-      </p>
-    </section>
-
-    <section id="features">
-      <h2>Features and Locations</h2>
-      <p>Each of our beachfront tiny homes offers:</p>
-      <ul>
-        <li>Private deck with ocean views</li>
-        <li>Eco-friendly design and solar power</li>
-        <li>Luxury bedding and rain showers</li>
-        <li>Free Wi-Fi and smart home features</li>
-        <li>Walking distance to cafes and surf beaches</li>
-      </ul>
-      <p>
-        Locations currently available:
-      </p>
-      <ul>
-        <li>Noosa Heads</li>
-        <li>Caloundra</li>
-        <li>Bribie Island</li>
-        <li>Byron Bay</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Beachfront Breakaway. All rights reserved.
-  </footer>
-
-</body>
-</html>
+        We offer

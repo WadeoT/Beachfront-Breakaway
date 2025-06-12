@@ -2,67 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Beachfront Breakaway</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beachfront Breakaway</title>
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      background-color: #FDFDFD;
-      color: #333;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    :root {
+      --color1: #E8C58E; /* sandy beach */
+      --color2: #A0C8E8; /* soft ocean blue */
+      --color3: #8D99A3; /* muted slate */
+      --font: 'Montserrat', sans-serif;
     }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
     nav {
+      background-color: var(--color1);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background-color: #E8C58E;
-      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--color3);
     }
-    .content {
-      padding: 2rem;
+
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .header-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      color: var(--color1);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .logo {
+      max-width: 120px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.8));
+    }
+
+    main {
+      flex-grow: 1;
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto 3rem auto;
+      padding: 0 1rem;
     }
-    h1 {
-      color: #A0C8E8;
+
+    h2 {
+      color: var(--color2);
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--color1);
+      padding-bottom: 0.3rem;
     }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
     footer {
-      background-color: #8D99A3;
+      background-color: var(--color3);
       color: white;
       text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Form styling */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: var(--color2);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 2px solid var(--color1);
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 1.3rem;
+      font-family: var(--font);
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--color2);
+    }
+
+    button {
+      background-color: var(--color1);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover,
+    button:focus {
+      background-color: var(--color2);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Page visibility */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
     }
   </style>
 </head>
 <body>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="features.html">Features & Location</a>
-    <a href="booking.html">Book Now</a>
-    <a href="contact.html">Contact</a>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About Us</a>
+    <a onclick="showPage('features')">Features & Location</a>
+    <a onclick="showPage('booking')">Book Now</a>
+    <a onclick="showPage('contact')">Contact</a>
   </nav>
 
-  <div class="content">
-    <h1>About Us</h1>
-    <p>At Beachfront Breakaway, we believe in the power of nature to refresh the soul. Our mission is to offer a high-end, environmentally friendly experience for families and couples seeking a peaceful escape from everyday life. Nestled in secluded coastal areas, our tiny homes are designed to be completely off-grid, using solar energy, rainwater harvesting, and sustainable building practices to reduce our impact on the planet.</p>
+  <!-- Home Page -->
+  <section id="home" class="page active">
+    <header>
+      <img src="images/header.jpg" alt="Beachfront View" class="header-img" />
+      <div class="hero-text">
+        <img src="images/logo.png" alt="Beachfront Breakaway Logo" class="logo" />
+        <h1>Beachfront Breakaway</h1>
+        <p>Where nature meets comfort – your beachside escape</p>
+      </div>
+    </header>
 
-    <p>We balance the triple bottom line — People, Planet, and Profit — by ensuring our retreats are luxurious yet affordable, sustainable yet comfortable, and exclusive yet welcoming. Our vision is to expand to 5–10 homes in isolated destinations where guests can enjoy nature, learn about sustainable living, and truly unwind.</p>
+    <main>
+      <section class="intro">
+        <h2>Welcome to Your Luxury Beach Retreat</h2>
+        <p>
+          At Beachfront Breakaway, we offer the perfect balance between modern luxury and natural serenity. Located in remote coastal areas, our tiny homes are ideal for couples and families seeking a peaceful escape powered by nature.
+        </p>
+      </section>
+    </main>
+  </section>
 
-    <p>Whether you're watching the sunset from your private deck or waking up to the sound of the ocean, we aim to deliver a truly unforgettable stay that leaves you refreshed and inspired.</p>
-  </div>
+  <!-- About Us Page -->
+  <section id="about" class="page">
+    <main>
+      <section>
+        <h2>About Us</h2>
+        <p>
+          Beachfront Breakaway is a luxurious, eco-friendly retreat designed for nature-loving, adventurous people who seek comfort and sustainability. Our tiny homes are completely off-grid, powered by solar energy, and built with recycled and natural materials to ensure a net-zero carbon footprint.
+        </p>
+        <p>
+          We balance the triple bottom line of people, planet, and profit, providing unique experiences while protecting the environment and supporting the local community.
+        </p>
+        <p>
+          Our mission is to offer affordable luxury beachside stays for older couples and families wanting a peaceful escape, while educating guests on reducing their carbon footprint.
+        </p>
+        <p>
+          We envision expanding to build multiple homes in isolated, pristine locations, promoting eco-tourism and sustainability education.
+        </p>
+      </section>
+    </main>
+  </section>
+
+  <!-- Features & Location Page -->
+  <section id="features" class="page">
+    <main>
+      <section>
+        <h2>Features</h2>
+        <ul>
+          <li>Completely off-grid tiny homes with solar power</li>
+          <li>Water reclaiming and rainwater storage systems</li>
+          <li>Zero waste policy with composting and recycling</li>
+          <li>Built with natural and recycled materials</li>
+          <li>Luxurious, modern interiors with beachy, natural aesthetics</li>
+          <li>Ideal for families and couples looking for unique beach escapes</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Location</h2>
+        <p>
+          Our homes are nestled in remote, pristine coastal locations where guests can fully immerse in nature. Enjoy secluded beaches, spectacular sunrises, and peaceful surroundings far from city noise.
+        </p>
+        <p>
+          Each location supports local ecosystems and communities, ensuring our footprint remains light and beneficial.
+        </p>
+      </section>
+    </main>
+  </section>
+
+  <!-- Booking Page -->
+  <section id="booking" class="page">
+    <main>
+      <section>
+        <h2>Book Your Stay</h2>
+        <form>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="checkin">Check-in Date</label>
+          <input id="checkin" name="checkin" type="date" required />
+
+          <label for="checkout">Check-out Date</label>
+          <input id="checkout" name="checkout" type="date" required />
+
+          <label for="guests">Number of Guests</label>
+          <input id="guests" name="guests" type="number" min="1" max="10" required />
+
+          <button type="submit">Submit Booking Request</button>
+        </form>
+      </section>
+    </main>
+  </section>
+
+  <!-- Contact Page -->
+  <section id="contact" class="page">
+    <main>
+      <section>
+        <h2>Contact Us</h2>
+        <form>
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="contact-name" type="text" required />
+
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="contact-email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </section>
 
   <footer>
     <p>&copy; 2025 Beachfront Breakaway</p>
   </footer>
+
+  <script>
+    function showPage(pageId) {
+      // Hide all pages
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+      // Show selected page
+      document.getElementById(pageId).classList.add('active');
+      // Scroll to top on page switch
+      window.scrollTo(0, 0);
+    }
+  </script>
 </body>
 </html>

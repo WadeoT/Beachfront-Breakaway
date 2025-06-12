@@ -2,143 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | Beachfront Breakaway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beachfront Breakaway - A luxurious, eco-friendly beachside retreat where nature meets comfort." />
+  <title>Beachfront Breakaway</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --sand: #E8C58E;
-      --sky: #A0C8E8;
-      --slate: #8D99A3;
-      --text-dark: #333;
-    }
-
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--sky);
-      color: var(--text-dark);
+      font-family: 'Montserrat', sans-serif;
+      background-color: #FDFDFD;
+      color: #333;
     }
-
-    nav {
-      position: sticky;
+    header {
+      background: url('https://us1-prod-images.disco-api.com/2020/07/24/3e2a1527-c6c4-33b4-a637-8389d99b29fd.jpeg?bf=0&f=jpg&p=true&q=70&w=1920') no-repeat center center;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
       top: 0;
-      background-color: var(--slate);
-      padding: 1rem;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+    header h1, header p {
+      z-index: 1;
+      text-align: center;
+      margin: 0.5rem;
+    }
+    nav {
       display: flex;
       justify-content: center;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      gap: 1.5rem;
+      background-color: #E8C58E;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-
     nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .cta {
+      text-align: center;
+      background-color: #A0C8E8;
+      color: white;
+      padding: 2rem;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: #F5F5F5;
+      padding: 1rem;
+      border-radius: 12px;
+    }
+    footer {
+      background-color: #8D99A3;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    img.logo {
+      width: 120px;
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #E8C58E;
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
+      border-radius: 6px;
       font-weight: bold;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--sand);
-      transform: scale(1.05);
-    }
-
-    header {
-      background-color: var(--sand);
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-dark);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(141,153,163,0.2);
-      margin-bottom: 2rem;
-    }
-
-    section h2 {
-      margin-top: 0;
-      font-size: 2rem;
-      color: var(--slate);
-    }
-
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: var(--slate);
-      color: white;
-      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
-
-  <!-- Nav -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="booking.html">Book</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Page Header -->
   <header>
-    <h1>About Us</h1>
-    <p>Luxury. Sustainability. Nature — All in One.</p>
+    <img src="logo.png" alt="Beachfront Breakaway Logo" class="logo" />
+    <h1>Beachfront Breakaway</h1>
+    <p>Where nature meets comfort - your beachside escape</p>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section>
-      <h2>Who We Are</h2>
-      <p>
-        Beachfront Breakaway is a modern, luxurious short-stay retreat designed for those who value nature, comfort, and sustainability. Our eco-conscious tiny homes are situated in stunning, remote beachfront locations — offering a high-end escape without harming the environment.
-      </p>
-    </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features & Location</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section>
-      <h2>Our Mission</h2>
-      <p>
-        Our mission is to provide an affordable but luxurious coastal retreat for older couples and families looking to escape the stress of everyday life. We believe in the healing power of nature and have designed our homes to be completely off-grid, powered by solar energy, and zero-waste. Visitors not only enjoy a premium getaway, but also learn how to reduce their carbon footprint.
-      </p>
-    </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Beachfront Breakaway is a luxurious yet eco-friendly retreat designed for those seeking peace, nature, and comfort. Built on the principles of sustainability, our homes are completely off-grid, powered by the sun, and leave zero waste behind. Every detail — from recycled cement walls to reclaimed rainwater systems — has been thoughtfully chosen to protect and enhance our beautiful beachside environment.
+    </p>
+    <p>
+      Our mission is simple: to offer older couples and families a chance to escape the chaos of everyday life and reconnect with each other and the planet. When you stay with us, you're not only indulging in modern comfort and secluded natural beauty, you're also part of a movement toward a more sustainable future.
+    </p>
+  </section>
 
-    <section>
-      <h2>Our Vision</h2>
-      <p>
-        We aim to build 5–10 sustainable homes in remote locations, creating a network of unique travel destinations where relaxation meets education. Each stay is a step toward a greener future, empowering guests with tools and inspiration to live more sustainably.
-      </p>
-    </section>
+  <section id="features">
+    <h2>Features & Locations</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Self-Sustaining Homes</h3>
+        <p>Solar-powered, rainwater-fed, and zero-waste designs that don’t sacrifice comfort.</p>
+      </div>
+      <div class="feature">
+        <h3>Unbeatable Locations</h3>
+        <p>Private beachfronts and forest hideaways in handpicked, isolated coastal gems.</p>
+      </div>
+      <div class="feature">
+        <h3>Luxury Meets Nature</h3>
+        <p>King-size beds, rain showers, designer finishes — all surrounded by pure wilderness.</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Why Sustainability Matters</h2>
-      <p>
-        We operate by the Triple Bottom Line: People, Planet, and Profit. By balancing customer satisfaction, environmental stewardship, and responsible profitability, we ensure Beachfront Breakaway thrives long-term — without compromising ethics or quality. Our goal is to pay off construction within two years and land within five, all while staying carbon-neutral.
-      </p>
-    </section>
-  </main>
+  <section class="cta" id="booking">
+    <h2>Book Your Escape</h2>
+    <p>Availability is limited — especially in summer. Reserve your luxurious off-grid retreat today.</p>
+    <a href="#" class="btn">Book Now</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or need help planning your escape? Our friendly team is here to help.</p>
+    <p>Email: <a href="mailto:stay@beachfrontbreakaway.com">stay@beachfrontbreakaway.com</a></p>
+    <p>Phone: 1800 123 456</p>
+  </section>
 
   <footer>
-    &copy; 2025 Beachfront Breakaway. All rights reserved.
+    <p>&copy; 2025 Beachfront Breakaway. Designed with love and sustainability in mind.</p>
   </footer>
-
 </body>
 </html>

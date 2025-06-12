@@ -5,27 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beachfront Breakaway</title>
   <style>
-    /* Reset and basic styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #e0f7fa;
       color: #004d40;
     }
+
+    nav {
+      background-color: #004d40;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #b2dfdb;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       position: relative;
       text-align: center;
       color: white;
-      margin: 0;
-      padding: 0;
       overflow: hidden;
     }
+
     header img {
       width: 100%;
       height: 60vh;
       object-fit: cover;
       display: block;
     }
+
     .header-text {
       position: absolute;
       top: 50%;
@@ -34,56 +51,50 @@
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
       width: 90%;
     }
+
     .header-text h1 {
       font-size: 3rem;
       margin: 0 0 0.5rem 0;
       letter-spacing: 2px;
     }
+
     .header-text p {
       font-size: 1.5rem;
       margin: 0;
       font-style: italic;
     }
+
     main {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    #about-us {
+
+    section {
       background-color: #b2dfdb;
       padding: 2rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,77,64,0.2);
       margin-bottom: 2rem;
     }
-    #about-us h2 {
-      color: #004d40;
+
+    section h2 {
       margin-top: 0;
       font-size: 2rem;
+      color: #004d40;
     }
-    #about-us p {
+
+    section p {
       font-size: 1.1rem;
       line-height: 1.6;
       color: #004d40;
     }
-    #booking {
-      margin-top: 2rem;
-      text-align: center;
+
+    ul {
+      padding-left: 1.2rem;
+      color: #004d40;
     }
-    #booking button {
-      background-color: #00796b;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      margin: 0 1rem;
-      font-size: 1.1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    #booking button:hover {
-      background-color: #004d40;
-    }
+
     footer {
       text-align: center;
       padding: 1rem 0;
@@ -94,6 +105,13 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="booking.html">Book</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <header>
     <img 
@@ -110,35 +128,37 @@
     <section id="about-us">
       <h2>About Us</h2>
       <p>
-        Welcome to Beachfront Breakaway, your perfect short stay accommodation by the sea. We offer a serene and eco-friendly escape where you can relax, recharge, and enjoy the natural beauty of the coastline without sacrificing modern comforts. Whether you're here to explore, unwind, or spend quality time with loved ones, Beachfront Breakaway is your ideal beachside retreat.
+        Welcome to Beachfront Breakaway, your perfect short stay accommodation by the sea.
+        We offer a serene and eco-friendly escape where you can relax, recharge, and enjoy the
+        natural beauty of the coastline without sacrificing modern comforts.
       </p>
     </section>
 
-    <section id="booking">
-      <button id="check-availability">Check Availability</button>
-      <button id="contact-us">Contact Us</button>
+    <section id="features">
+      <h2>Features and Locations</h2>
+      <p>Each of our beachfront tiny homes offers:</p>
+      <ul>
+        <li>Private deck with ocean views</li>
+        <li>Eco-friendly design and solar power</li>
+        <li>Luxury bedding and rain showers</li>
+        <li>Free Wi-Fi and smart home features</li>
+        <li>Walking distance to cafes and surf beaches</li>
+      </ul>
+      <p>
+        Locations currently available:
+      </p>
+      <ul>
+        <li>Noosa Heads</li>
+        <li>Caloundra</li>
+        <li>Bribie Island</li>
+        <li>Byron Bay</li>
+      </ul>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Beachfront Breakaway. All rights reserved.
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Button references
-      const checkBtn = document.getElementById('check-availability');
-      const contactBtn = document.getElementById('contact-us');
-
-      checkBtn.addEventListener('click', () => {
-        alert('Booking feature coming soon! Please contact us at booking@beachfrontbreakaway.com');
-      });
-
-      contactBtn.addEventListener('click', () => {
-        alert('Contact us feature coming soon! Please email info@beachfrontbreakaway.com');
-      });
-    });
-  </script>
 
 </body>
 </html>

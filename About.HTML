@@ -2,179 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beachfront Breakaway</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --sand: #E8C58E;
-      --sky: #A0C8E8;
-      --slate: #8D99A3;
-      --white: #ffffff;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--white);
-      color: #333;
-    }
-
-    nav {
-      background-color: var(--sand);
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    nav a:hover {
-      color: var(--slate);
-    }
-
-    header {
-      text-align: center;
-      background-color: var(--sky);
-      padding: 2rem 1rem;
-    }
-
-    .logo {
-      width: 180px;
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      margin-bottom: 1rem;
-    }
-
-    .hero-text h1 {
-      margin: 0.5rem 0;
-      color: var(--slate);
-    }
-
-    .hero-text p {
-      font-style: italic;
-      color: var(--sand);
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--sky);
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background-color: var(--slate);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    form label {
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    form input, form textarea {
-      padding: 0.7rem;
-      border: 2px solid var(--sand);
-      border-radius: 5px;
-      margin-top: 0.3rem;
-    }
-
-    form button {
-      margin-top: 1rem;
-      padding: 0.7rem;
-      border: none;
-      background-color: var(--sand);
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: var(--sky);
-    }
-
-    .section-divider {
-      border-top: 2px solid var(--sand);
-      margin: 3rem 0;
-    }
-  </style>
+  <title>About Us - Beachfront Breakaway</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#features">Features & Location</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="features.html">Features & Location</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <header id="home">
-    <img src="Beachfront Breakaway Logo.png" alt="Beachfront Breakaway Logo" class="logo">
+  <header>
+    <img src="Beachfront Breakaway Logo.png" alt="Logo" class="logo">
     <div class="hero-text">
-      <h1>Beachfront Breakaway</h1>
-      <p>Where nature meets comfort – your beachside escape</p>
+      <h1>About Us</h1>
     </div>
   </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Beachfront Breakaway is a luxurious islander retreat designed for nature-loving adventurers with a taste for modern comfort. Our eco-friendly, off-grid tiny homes are nestled in pristine, isolated locations along the coast, giving you a private paradise that's both luxurious and sustainable.</p>
-    <p>We care deeply about the triple bottom line: People, Planet, and Profit. Our mission is to provide an unforgettable getaway while being net-zero, self-sustaining, and supportive of the local ecosystem. With solar power, rainwater collection, and zero waste systems, your stay helps preserve the beauty you came to experience.</p>
-  </section>
+  <section>
+    <h2>Our Mission</h2>
+    <p>To provide a luxurious but affordable retreat for older couples and families seeking peace, privacy, and eco-conscious living. Our homes are self-sustaining and built to minimize impact on the planet.</p>
 
-  <div class="section-divider"></div>
-
-  <section id="features">
-    <h2>Features & Location</h2>
-    <ul>
-      <li>🌞 100% Off-grid Solar Powered Homes</li>
-      <li>🌿 Composting toilets and eco showers</li>
-      <li>🏝️ Secluded beach locations with private access</li>
-      <li>🔥 Outdoor firepits & luxury coastal interiors</li>
-      <li>🚲 Nature trails, kayaking, and local adventures</li>
-    </ul>
-    <p>Each of our tiny homes is situated in a carefully chosen location to maximise ocean views, seclusion, and harmony with the local environment. Whether you're stargazing by the fire or waking up to waves, Beachfront Breakaway is your escape to nature — without compromise.</p>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="#" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+    <h2>Our Vision</h2>
+    <p>To build 5–10 tiny homes in remote, beachside areas, giving customers a break from life while learning about sustainable living and carbon reduction.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Beachfront Breakaway — Where nature meets comfort</p>
+    <p>&copy; 2025 Beachfront Breakaway</p>
   </footer>
-
 </body>
 </html>

@@ -1,105 +1,76 @@
-
-:root {
-  --sand: #E8C58E;
-  --sky: #A0C8E8;
-  --slate: #8D99A3;
-  --white: #ffffff;
-}
-
 body {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--white);
+  margin: 0;
+  background-color: #fff;
   color: #333;
 }
 
 nav {
-  background-color: var(--sand);
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  gap: 2rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
-nav a {
-  color: white;
+.nav-button {
+  background-color: #A0C8E8;
+  color: #333;
+  padding: 10px 20px;
+  margin: 5px;
   text-decoration: none;
-  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-nav a:hover {
-  color: var(--slate);
+.nav-button:hover {
+  background-color: #8D99A3;
+  color: white;
 }
 
 header {
+  position: relative;
   text-align: center;
-  background-color: var(--sky);
-  padding: 2rem 1rem;
+  color: white;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(70%);
 }
 
 .logo {
-  width: 180px;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
+  width: 100px;
+  margin-top: 20px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
 }
 
 .hero-text h1 {
-  margin: 0.5rem 0;
-  color: var(--slate);
+  font-size: 2.5em;
+  margin: 0;
 }
 
 .hero-text p {
-  font-style: italic;
-  color: var(--sand);
+  font-size: 1.2em;
 }
 
-section {
-  padding: 2rem;
-  max-width: 900px;
+.content {
+  padding: 40px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
-h2 {
-  color: var(--sky);
-  margin-bottom: 1rem;
-}
-
 footer {
-  background-color: var(--slate);
-  color: white;
   text-align: center;
-  padding: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-form input, form textarea {
-  padding: 0.7rem;
-  border: 2px solid var(--sand);
-  border-radius: 5px;
-  margin-top: 0.3rem;
-}
-
-form button {
-  margin-top: 1rem;
-  padding: 0.7rem;
-  border: none;
-  background-color: var(--sand);
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: var(--sky);
+  background-color: #E8C58E;
+  padding: 15px;
+  margin-top: 40px;
 }

@@ -1,1 +1,89 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f9f7;
+  color: #2d2d2d;
+}
+
+header.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+header.hero.small {
+  height: 40vh;
+}
+
+header .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  width: 100%;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section.intro,
+section.features,
+section.content {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  flex: 1 1 250px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #3b7a57;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background: #326d4c;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #e1ece6;
+  margin-top: 4rem;
+}
 
